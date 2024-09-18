@@ -1,0 +1,171 @@
+body{
+    background-color: rgb(17, 23, 42);
+    color: white;
+    font: fallback;
+}
+
+.message{
+    margin: 5em 0 2em;
+    text-align: center
+    
+}   
+
+.imgs {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    height: 20px;
+    /* boya height da aneyn chonka ka dastaka agordret size akay gawraw pchok abetawa */
+}
+
+.computer img, .player img
+{
+    width: 75%;
+    /* bo away toze pchokyan kainawa */
+}
+
+#points{
+    margin: 7em 0; 
+    /* ama margin y top w bottom a */
+    text-align: center;
+
+}
+
+.computerPoint{
+    margin-left: 4em;
+}
+
+.playerPoint{
+    margin-right: 4em;
+}
+
+.options{
+
+    display: flex;
+    justify-content: space-around;
+    /* space-around ysh wako space-between waya balam achet space aya ba start w end yshyan 
+       space-evenly ysh haman shta balam ba yaksany space akanayan ayate */
+}
+
+.reset-container button.resetB{
+    margin-left: 681px;
+    margin-top: 70px;
+}
+
+ button{
+    color: white;
+    background: none;
+    border: 1px solid white;
+    font-family: Arial;
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 6px;
+    width: 10%;
+    /* bo away hamoyan yak qyas bn  */
+    white-space: nowrap;
+
+/* ema atwanin animation drost bkain ba 2 shewaz yakyan transition yakyan animation farqakayan awaya ka 
+    transtion abet cursor aka bcheta sary enjaka react akat balam animation shteka la website akaya ka ba bardawamy
+    jola akat bo nmona -> eka ajoletawa.
+    la[ transition ] a tab3an abet component ekman habet ka btwanin gorankary la property ekaya bkain
+    bo nmona button, buttonekman haya la hover a chand taybatmandyankman yawa pey agar bmanawet dast kary yak
+    taybatmandy kain achin ama anosin la bankrny e7tyadekaya wata la hover akaya na 
+    transition-property: transform  ama dyary daka ka aya ch gorakaryak gorany basara bet
+        
+    transition-duration: 0.3s; amash dyary dakain aya kary gary goranaka chany pe bchet. 
+    -o-transition-timing-function: ease;  am propertya katy sari3y rodany goranaka dyaridakat.
+    wa ama ba defult ease a naw3eky tr away ease-in a ka wata la saratawa ba effect aka ba hewashy bgoret yan bardawam bet]
+    ease-out la axira ba xawy bardawam abet ease-in-out ishman haya hardokyana wa liner yshma haya ka har ba smothy 
+    la yakamawa ta axir agoret ease ysh sarata bo mawayaky kam xawa dway asay abetawa w axirakay xaw abet.
+    transition-delay: aw kata dyary akat ka cursor aka acheta sary w am pey ache ka effect aka dast pe bkat ka zorjar 0s a.
+
+    balam regayaky kortrman haya ka har awa aynosin 
+    transition: transform 0.3s ease-in-out 0s;
+    wa ashtwanin aw 0 sh nanosin wa agar bmanawet am mwasafatana bo hamo taybatmandekan zya bkain baw shewaya aynosin
+*/
+    transition: all 0.3s ease-in-out;
+}
+
+.options button:hover{
+    background-color: #094c0a;
+    border-color: #094c0a;
+    transform: scale(1.1);
+}
+
+.reset-container button:hover {
+    background-color: #106a85;
+    border-color: #106a85;
+    transform: scale(1.1);
+}
+/*  bodrost krdny animation  abet am keyword a bnosin @keyframes pashan nawy animation aka
+*/
+
+@keyframes shakeComputer {
+    /*
+    leraya ema achin from{} lagal to{} bakar ahenin balam bo away btwain ka detal y zyatr
+    bayn ba animination akaya la bayny sarataw axira achin ay gorin ba % aya
+    */
+
+    0% {
+        transform: rotate(-30deg);
+        }
+    25% {
+    transform: rotate(30deg);
+    }
+    50% {
+    transform: rotate(-30deg);
+    }
+    75% {
+    transform: rotate (30deg);
+    }
+    100% {
+    transform: rotate(0deg);
+    }
+}
+
+@keyframes shakePlayer {
+    /* lamayana bas achin sign akan 3aks akainawa */
+    0% {
+        transform: rotate(30deg);
+        }
+    25% {
+    transform: rotate(-30deg);
+    }
+    50% {
+    transform: rotate(30deg);
+    }
+    75% {
+    transform: rotate (-30deg);
+    }
+    100% {
+    transform: rotate(0deg);
+    }
+}
+
+.computerImg {
+
+    /* atwanin bany img aka bkain balam wa bashtra awa bykaina classekawa bo away byanyn ba shty trish */
+    animation: shakeComputer 6s  linear; /* awa leraya bany akain*/
+
+    /*  animation: name duration timing-function delay iteration-count direction fill-mode;
+
+        la animation ysha am shtanaman haya 
+
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: 1; ama dyary akat aya chan jar robat yak yan 2 yan ifinite
+        animation-direction: normal; ama atwanin  resevers da bneyn awkata 7arakakan ba 3aksawa ro aya.
+
+        animation-fill-mode: both; 
+        balam tab3an ama zory pe ache awish baw shewaway sarawa kort akeretawa
+        */
+    }
+
+.playerImg {
+
+    animation: shakePlayer 6s  linear; 
+
+}
