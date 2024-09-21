@@ -48,10 +48,9 @@ function playGame(choice) {
         computerScore++;
     }
 
+    document.getElementById('computer').querySelector('img').src = `src/${computerChoice}Computer.png`;
+    document.getElementById('player').querySelector('img').src = `src/${choice}Player.png`;
 
-
-    playerElement.querySelector('img').src = "src/${choice}Player.png";
-    computerElement.querySelector('img').src = "src/${computerChoice}Computer.png";
 
     /* am querySelector a methodeka bo garandaway aw elementay ka class y computerPoint y 
     pe drawa balam achet yakam dana agarenetawa agar bmanawet hamo aw elementana bgarenertawa
@@ -62,7 +61,7 @@ function playGame(choice) {
     document.querySelector('.playerPoint').innerText = playerScore;
 
     if( choice === computerChoice) alert(resultMessage);
-    
+
 
     /* this setTimeout method have 2 part first is the function that excute and the second one is the time which that function
     wil excute after it in milisecond
@@ -71,7 +70,9 @@ function playGame(choice) {
     setTimeout(() => {
         computerElement.classList.remove('comClassAnimationDetail');
         playerElement.classList.remove('plClassAnimationDetail');
-    }, 6000);
+    }, 900);
+
+
     /*const hello = function() {
     console.log("Hello");
     }
@@ -82,9 +83,7 @@ function playGame(choice) {
     hello("Bro", 25);
     kawata bakar hen any aw arrow ya It's a shorter and more concise way to write functions agar yak line code ysh bet aw{}anaman
     nawet */ 
-    document.getElementById('computer').querySelector('img').src = 'src/stoneComputer.png';
-    document.getElementById('player').querySelector('img').src = 'src/stonePlayer.png';
-
+    
     
 }
 
@@ -93,4 +92,7 @@ function playGame(choice) {
         playerScore = 0;
         document.querySelector('.computerPoint').innerText = computerScore;
         document.querySelector('.playerPoint').innerText = playerScore;
-    }
+
+        document.getElementById('computer').querySelector('img').src = 'src/rockComputer.png';
+        document.getElementById('player').querySelector('img').src = 'src/rockPlayer.png';
+    }``
