@@ -6,7 +6,7 @@ body{
 
 .message{
     margin: 5em 0 2em;
-    text-align: center
+    text-align: center;
     
 }   
 
@@ -143,7 +143,7 @@ body{
     }
 }
 
-.computerImg {
+.comClassAnimationDetail {
 
     /* atwanin bany img aka bkain balam wa bashtra awa bykaina classekawa bo away byanyn ba shty trish */
     animation: shakeComputer 6s  linear; /* awa leraya bany akain*/
@@ -164,7 +164,7 @@ body{
         */
     }
 
-.playerImg {
+.plClassAnimationDetail {
 
     animation: shakePlayer 6s  linear; 
 
