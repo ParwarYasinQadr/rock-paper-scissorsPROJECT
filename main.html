@@ -4,31 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Rock paper scissors</title>
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
     <div class="container">
-        <div class="message"> Chose an optoin </div>
-    
+        <div class="message">Choose an option</div>
+
         <div class="imgs"> 
-            
-            <div class="computer" class="computerImg ">
+            <div id="computer" class="computer">
                 <img src="src/stoneComputer.png"/>
             </div>
-
-            <div class="player" class="playerImg ">
+            <div id="player" class="player">
                 <img src="src/stonePlayer.png"/>        
             </div>
-
         </div>
-    
-    
+
         <div id="points">
-
             COMPUTER <span class="computerPoint">0</span>  /  <span class="playerPoint">0</span> PLAYER
-
         </div>
-    
+
         <div class="options">
             <button onclick="playGame('rock')">Rock</button>
             <button onclick="playGame('paper')">Paper</button>
@@ -36,10 +30,10 @@
         </div>
 
         <div class="reset-container">
-            <button class="resetB">Reset the points</button>
+            <button class="resetB" onclick="resetPoints()">Reset the points</button>
         </div>
-
     </div>
-
+    
+    <script src="script.js"></script> <!-- Ensure you link your JS file here -->
 </body>
 </html>
